@@ -7,7 +7,8 @@ function processMutants(mutants) {
 }
 
 function addMutant(mutant) {
-  $('#mutantList').append('<li>' + mutant.mutant_name + '</li>');
+  $('#mutantList').append('<li data-id="'+ mutant.id + '">' +
+    mutant.mutant_name + '</li>');
 }
 
 $.get({
