@@ -18,7 +18,9 @@ function addMutant(mutant) {
   $('#mutantList').append(li);
 }
 
-$.get({
-  url: mutantsUrl,
-  success: processMutants
+$(function() {
+  $.get({
+    url: mutantsUrl,
+    success: processMutants
+  });
 });
