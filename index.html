@@ -6,15 +6,23 @@
   </head>
   <body>
     <h1>jMutants</h1>
-    <form>
+    <form id="new_mutant">
       <input type="text"
              name="mutantName"
              placeholder="Enter a mutant name">
       <button type="submit">Create</button>
     </form>
+    <form id="edit_mutant">
+      <input type="hidden" name="mutantId">
+      <input type="text"
+             name="mutantName"
+             placeholder="Enter a mutant name">
+      <button type="submit">Update</button>
+    </form>
     <ul id="mutantList">
       <li class="template">
         <span class="mutant-name">Wolverine</span>
+        <a href="#" class="edit">(edit)</a>
         <a href="#" class="delete">(delete)</a>
       </li>
     </ul>
@@ -23,6 +31,7 @@
     <script src="js/load-mutants.js"></script>
     <script src="js/delete-mutant.js"></script>
     <script src="js/create-mutant.js"></script>
+    <script src="js/update-mutant.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
