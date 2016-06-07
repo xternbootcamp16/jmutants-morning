@@ -7,8 +7,15 @@ function processMutants(mutants) {
 }
 
 function addMutant(mutant) {
-  $('#mutantList').append('<li data-id="'+ mutant.id + '">' +
-    mutant.mutant_name + '</li>');
+  var li = $('li.template')
+    .clone()
+    .removeClass('template')
+    .attr('data-id', mutant.id);
+
+  li.find('.mutant-name')
+    .html(mutant.mutant_name);
+
+  $('#mutantList').append(li);
 }
 
 $.get({
